@@ -1,16 +1,20 @@
 import json
 from fastapi import APIRouter, HTTPException
+import os
 
 auth_router = APIRouter()
 
 from models.auth_models import LoginForm, RegisterForm
 
 def get_all_users():
+    if not os.path.exists("./fake_db/users.json"):
+        with open("./fake_db/users.json", "w") as file:
+            file.write("{}")  # Initialize as empty dictionary
     with open("./fake_db/users.json", "r") as file:
         return json.load(file)
     
 def save_users(new_users):
-    with open("/fake.db/users.json", "w") as file:
+    with open("./fake_db/users.json", "w") as file:
         file.write(json.dumps(new_users, indent=4))
 
 @auth_router.post("/register")

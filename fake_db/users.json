@@ -1,0 +1,20 @@
+{
+    "goober@gmail.com": {
+        "fname": "firstname",
+        "lname": "lastname",
+        "email": "example.email@gmail.com",
+        "password": "password123"
+    },
+    "jperry@gmail.com": {
+        "fname": "example",
+        "lname": "name",
+        "email": "jperry@gmail.com",
+        "password": "hello123"
+    },
+    "example.bobby@gmail.com": {
+        "fname": "Example",
+        "lname": "Bobby",
+        "email": "example.bobby@gmail.com",
+        "password": "hello123"
+    }
+}
